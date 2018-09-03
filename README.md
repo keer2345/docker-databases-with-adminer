@@ -1,5 +1,24 @@
 # Play Databases with Adminer and Docker
 
+
+<!-- vim-markdown-toc GFM -->
+
+* [Reference:](#reference)
+* [Adminer](#adminer)
+* [Postgres](#postgres)
+    * [Configuration](#configuration)
+    * [Connection with Adminer and Postgres](#connection-with-adminer-and-postgres)
+* [MySQL](#mysql)
+    * [Configuration](#configuration-1)
+    * [Connection with Adminer and MySQL](#connection-with-adminer-and-mysql)
+* [MongoDB](#mongodb)
+    * [Configuration](#configuration-2)
+    * [Connection with Adminer and MongoDB](#connection-with-adminer-and-mongodb)
+* [Environment Variable](#environment-variable)
+* [Global file](#global-file)
+
+<!-- vim-markdown-toc -->
+
 ## Reference:
 https://medium.com/@etiennerouzeaud/play-databases-with-adminer-and-docker-53dc7789f35f
 
@@ -25,8 +44,10 @@ services:
 
 
 ```
-
+> We can see the environment variable such as `${ADMINER_PORT}` in the `.env` file.
+>
 > Why don’t we use the official Adminer image ? You can use it, but it will not works with Mongo and PHP7.
+
 
 Now, you can run this container with the command:
 ```
