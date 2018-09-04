@@ -86,6 +86,10 @@ services:
 ```
 
 ### Connection with Adminer and Postgres
+```
+docker-compose up -d
+docker-compose down -v
+```
 Go back in Adminer (http://localhost:8001). Then complete the form :
 - *System* : select “PostgresSQL” ;
 - *Server* : type “dbPostgres” ;
