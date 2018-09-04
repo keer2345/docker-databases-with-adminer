@@ -20,7 +20,8 @@
 <!-- vim-markdown-toc -->
 
 ## Prepare the Environment:
-https://medium.com/@etiennerouzeaud/play-databases-with-adminer-and-docker-53dc7789f35f
+
+> https://medium.com/@etiennerouzeaud/play-databases-with-adminer-and-docker-53dc7789f35f
 
 Versions used of this software:
 - Docker : >= 17.12.0-ce ;
