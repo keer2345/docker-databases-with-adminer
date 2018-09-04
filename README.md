@@ -1,4 +1,10 @@
 # Play Databases with Adminer and Docker
+## Usage
+```
+cp .env.example .env
+docker-compose up -d
+docker-compose down -d
+```
 
 
 <!-- vim-markdown-toc GFM -->
