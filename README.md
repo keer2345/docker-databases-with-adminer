@@ -3,7 +3,8 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [Reference:](#reference)
+* [Prepare the Environment:](#prepare-the-environment)
+* [Environment Variable](#environment-variable)
 * [Adminer](#adminer)
 * [Postgres](#postgres)
     * [Configuration](#configuration)
@@ -14,12 +15,11 @@
 * [MongoDB](#mongodb)
     * [Configuration](#configuration-2)
     * [Connection with Adminer and MongoDB](#connection-with-adminer-and-mongodb)
-* [Environment Variable](#environment-variable)
 * [Global file](#global-file)
 
 <!-- vim-markdown-toc -->
 
-## Reference:
+## Prepare the Environment:
 https://medium.com/@etiennerouzeaud/play-databases-with-adminer-and-docker-53dc7789f35f
 
 Versions used of this software:
@@ -30,6 +30,12 @@ Versions used of this software:
 - MySQL : 8.0.3 ;
 - MongoDB : 3.6.2
 
+## Environment Variable
+```
+cp .env.example .env
+```
+We can see the environment variable file `.env` .
+
 ## Adminer
 `docker-compose.yml` :
 ```
@@ -39,15 +45,15 @@ services:
     adminer:
         image: dockette/adminer:full-php5
         restart: always
+        container_name: ${ADMINER_CONTAINER_NAME}
         ports:
             - ${ADMINER_PORT}:80
 
 
 ```
-> We can see the environment variable such as `${ADMINER_PORT}` in the `.env` file.
->
-> Why don’t we use the official Adminer image ? You can use it, but it will not works with Mongo and PHP7.
-
+*Note* :
+> 1. We can see the environment variable such as `${ADMINER_CONTAINER_NAME}` and `${ADMINER_PORT}` in the `.env` file.
+> 1. Why don’t we use the official Adminer image ? You can use it, but it will not works with Mongo and PHP7.
 
 Now, you can run this container with the command:
 ```
@@ -67,7 +73,10 @@ services:
 
     dbPostgres:
         image: postgres:10
+        container_name: ${POSTGRES_CONTAINER_NAME}
         restart: always
+        volumes:
+            - ${POSTGRES_DATA_DIR}:/var/lib/postgresql/data
         ports:
             - ${POSTGRES_PORT}:5432
         environment:
@@ -92,7 +101,5 @@ Go back in Adminer (http://localhost:8001). Then complete the form :
 ### Configuration
 ### Connection with Adminer and MongoDB
 
-## Environment Variable
-We can see the environment variable file `.env` .
 ## Global file
 We can see the global file `docker-compose.yml` .
