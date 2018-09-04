@@ -1,29 +1,12 @@
 # Play Databases with Adminer and Docker
 
 
-<!-- vim-markdown-toc GFM -->
-
-* [Prepare the Environment:](#prepare-the-environment)
-* [Environment Variable](#environment-variable)
-* [Adminer](#adminer)
-* [Postgres](#postgres)
-    * [Configuration](#configuration)
-    * [Connection with Adminer and Postgres](#connection-with-adminer-and-postgres)
-* [MySQL](#mysql)
-    * [Configuration](#configuration-1)
-    * [Connection with Adminer and MySQL](#connection-with-adminer-and-mysql)
-* [MongoDB](#mongodb)
-    * [Configuration](#configuration-2)
-    * [Connection with Adminer and MongoDB](#connection-with-adminer-and-mongodb)
-* [Global file](#global-file)
-
-<!-- vim-markdown-toc -->
 
 ## Prepare the Environment:
 
 > https://medium.com/@etiennerouzeaud/play-databases-with-adminer-and-docker-53dc7789f35f
 
-Versions used of this software:
+### Versions used of this Software
 - Docker : >= 17.12.0-ce ;
 - Docker Compose : >= 1.17.0 ;
 - Adminer : >= 4.5.0 ;
@@ -31,7 +14,7 @@ Versions used of this software:
 - MySQL : 8.0.3 ;
 - MongoDB : 3.6.2
 
-## Environment Variable
+### Environment Variable
 ```
 cp .env.example .env
 ```
