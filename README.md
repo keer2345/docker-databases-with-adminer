@@ -1,6 +1,24 @@
 # Play Databases with Adminer and Docker
 
 
+<!-- vim-markdown-toc GFM -->
+
+* [Prepare the Environment:](#prepare-the-environment)
+    * [Versions used of this Software](#versions-used-of-this-software)
+    * [Environment Variable](#environment-variable)
+* [Adminer](#adminer)
+* [Postgres](#postgres)
+    * [Configuration](#configuration)
+    * [Connection with Adminer and Postgres](#connection-with-adminer-and-postgres)
+* [MySQL](#mysql)
+    * [Configuration](#configuration-1)
+    * [Connection with Adminer and MySQL](#connection-with-adminer-and-mysql)
+* [MongoDB](#mongodb)
+    * [Configuration](#configuration-2)
+    * [Connection with Adminer and MongoDB](#connection-with-adminer-and-mongodb)
+* [Global file](#global-file)
+
+<!-- vim-markdown-toc -->
 
 ## Prepare the Environment:
 
