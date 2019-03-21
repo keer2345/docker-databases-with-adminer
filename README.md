@@ -3,7 +3,7 @@
 ```
 cp .env.example .env
 docker-compose up -d
-docker-compose down -d
+docker-compose down -v
 ```
 
 
