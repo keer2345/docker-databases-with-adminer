@@ -68,7 +68,7 @@ Now, you can run this container with the command:
 docker-compose up
 ```
 
-Working but we don’t have database server yet.
+Access to `http://127.0.0.1:8001` . Working but we don’t have database server yet.
 
 ## Postgres
 ### Configuration
@@ -105,6 +105,8 @@ Go back in Adminer (http://localhost:8001). Then complete the form :
 - *Password* : type “123456” ;
 - *Database* : type “pgDB” ;
 
+![](https://raw.githubusercontent.com/keer2345/docker-databases-with-adminer/master/images/postgre_login.png)
+![](https://raw.githubusercontent.com/keer2345/docker-databases-with-adminer/master/images/postgre_welcome.png)
 
 ## MySQL
 ### Configuration
