@@ -18,7 +18,6 @@ docker-compose down -v
     * [Connection with Adminer and Postgres](#connection-with-adminer-and-postgres)
 * [MySQL](#mysql)
     * [Configuration](#configuration-1)
-    * [Connection with Adminer and MySQL](#connection-with-adminer-and-mysql)
 * [MongoDB](#mongodb)
     * [Configuration](#configuration-2)
     * [Connection with Adminer and MongoDB](#connection-with-adminer-and-mongodb)
@@ -110,7 +109,20 @@ Go back in Adminer (http://localhost:8001). Then complete the form :
 
 ## MySQL
 ### Configuration
-### Connection with Adminer and MySQL
+```
+    dbMysql:
+        image: mysql:8
+        container_name: ${MYSQL_CONTAINER_NAME}
+        restart: always
+        volumes:
+            - ${MYSQL_DATA_DIR}:/var/lib/mysql
+        ports:
+            - ${MYSQL_PORT}:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DB}
+```
+
 ## MongoDB
 ### Configuration
 ### Connection with Adminer and MongoDB

@@ -2,7 +2,8 @@ version: '3'
 
 services:
     adminer:
-        image: dockette/adminer:full-php5
+        # image: dockette/adminer:full-php5
+        image: dockette/adminer
         restart: always
         container_name: ${ADMINER_CONTAINER_NAME}
         ports:
@@ -20,3 +21,14 @@ services:
             - POSTGRES_DB=${POSTGRES_DB}
             - POSTGRES_USER=${POSTGRES_USER}
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    dbMysql:
+        image: mysql:8
+        container_name: ${MYSQL_CONTAINER_NAME}
+        restart: always
+        volumes:
+            - ${MYSQL_DATA_DIR}:/var/lib/mysql
+        ports:
+            - ${MYSQL_PORT}:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DB}
