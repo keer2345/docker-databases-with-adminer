@@ -111,7 +111,8 @@ Go back in Adminer (http://localhost:8001). Then complete the form :
 ### Configuration
 ```
     dbMysql:
-        image: mysql:8
+        image: mysql:8.0.15
+        command: --default-authentication-plugin=mysql_native_password
         container_name: ${MYSQL_CONTAINER_NAME}
         restart: always
         volumes:
@@ -119,8 +120,8 @@ Go back in Adminer (http://localhost:8001). Then complete the form :
         ports:
             - ${MYSQL_PORT}:3306
         environment:
-            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-            MYSQL_DATABASE: ${MYSQL_DB}
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+            - MYSQL_DATABASE=${MYSQL_DB}
 ```
 
 ## MongoDB
