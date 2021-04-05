@@ -92,11 +92,12 @@ services:
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 ```
 
-### Connection with Adminer and Postgres
-```
-docker-compose up -d
-docker-compose down -v
-```
+### Connection to Postgres with pgAdmin
+
+![](https://raw.githubusercontent.com/keer2345/docker-databases-with-adminer/master/images/pgadmin.png)
+
+### Connection to Postgres with Adminer
+
 Go back in Adminer (http://localhost:8001). Then complete the form :
 - *System* : select “PostgresSQL” ;
 - *Server* : type “dbPostgres” ;
@@ -106,6 +107,7 @@ Go back in Adminer (http://localhost:8001). Then complete the form :
 
 ![](https://raw.githubusercontent.com/keer2345/docker-databases-with-adminer/master/images/postgre_login.png)
 ![](https://raw.githubusercontent.com/keer2345/docker-databases-with-adminer/master/images/postgre_welcome.png)
+
 
 ## MySQL
 ### Configuration
