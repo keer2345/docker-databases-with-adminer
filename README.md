@@ -94,6 +94,23 @@ services:
 
 ### Connection to Postgres with pgAdmin
 
+- Access to http://127.0.0.1:8002
+- Login with user `test@123.com` and password `123456`
+
+``` yml
+  pgadmin:
+    image: dpage/pgadmin4:5.1
+    container_name: ${PGADMIN_CONTAINER_NAME}
+    restart: always
+    ports:
+      - ${PGADMIN_PORT}:8080/tcp
+    environment: 
+      - PGADMIN_LISTEN_ADDRESS=0.0.0.0
+      - PGADMIN_LISTEN_PORT=8080
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+```
+
 ![](https://raw.githubusercontent.com/keer2345/docker-databases-with-adminer/master/images/pgadmin.png)
 
 ### Connection to Postgres with Adminer
