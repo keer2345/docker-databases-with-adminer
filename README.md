@@ -91,6 +91,17 @@ services:
             - POSTGRES_USER=${POSTGRES_USER}
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 ```
+### Connect to Postgres with Spring Boot
+For example, config `application.properties`:
+```
+spring.datasource.url=jdbc:postgresql://localhost:54321/springboot
+spring.datasource.username=root
+spring.datasource.password=123456
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.format_sql=true
+```
 
 ### Connection to Postgres with pgAdmin
 
