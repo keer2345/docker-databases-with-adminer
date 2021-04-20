@@ -94,7 +94,7 @@ services:
 ### Connect to Postgres with Spring Boot
 For example, config `application.properties`:
 ```
-spring.datasource.url=jdbc:postgresql://localhost:54321/springboot
+spring.datasource.url=jdbc:postgresql://localhost:54320/springboot
 spring.datasource.username=root
 spring.datasource.password=123456
 spring.jpa.hibernate.ddl-auto=create-drop
