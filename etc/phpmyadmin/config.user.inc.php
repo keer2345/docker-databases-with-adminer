@@ -1,1 +1,1 @@
-$cfg['LoginCookieValidity'] = 86;
+$cfg['LoginCookieValidity'] = 86400;
